@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bt33j5dwxano3"]
+[gd_scene load_steps=7 format=3 uid="uid://bt33j5dwxano3"]
 
 [ext_resource type="Texture2D" uid="uid://bacqucona7fm3" path="res://assets/top_ui.png" id="1_j7odh"]
 [ext_resource type="Script" path="res://scripts/top_ui.gd" id="2_0qkha"]
@@ -7,10 +7,17 @@
 [sub_resource type="LabelSettings" id="LabelSettings_yrpvj"]
 font = ExtResource("2_pei76")
 font_size = 24
+font_color = Color(0.831373, 0, 0.156863, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8bjlm"]
 font = ExtResource("2_pei76")
 font_size = 60
+font_color = Color(0.81287, 0.184831, 0.831116, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xoi7l"]
+font = ExtResource("2_pei76")
+font_size = 22
+font_color = Color(0.882353, 0, 0.101961, 1)
 
 [node name="top_ui" type="TextureRect"]
 offset_right = 576.0
@@ -50,8 +57,13 @@ size_flags_vertical = 5
 text = "00"
 label_settings = SubResource("LabelSettings_8bjlm")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="goal_label" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(158, 124)
+layout_direction = 2
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 5
+text = "Objetivo:
+000"
+label_settings = SubResource("LabelSettings_xoi7l")
+horizontal_alignment = 1

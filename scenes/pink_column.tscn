@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce4a8g7ciayym"]
+
+[ext_resource type="PackedScene" uid="uid://dimhfx4c1igfv" path="res://scenes/piece.tscn" id="1_pbmdo"]
+[ext_resource type="Texture2D" uid="uid://o60ibguctnm4" path="res://assets/pieces/Pink Column.png" id="2_o3lti"]
+
+[node name="PinkColumn" instance=ExtResource("1_pbmdo")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_o3lti")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://brp4euwugc18f" path="res://assets/background.png" id="1_blg2x"]
 [ext_resource type="PackedScene" uid="uid://bt33j5dwxano3" path="res://scenes/top_ui.tscn" id="2_wrbvl"]
-[ext_resource type="Texture2D" uid="uid://cdunkljd6up72" path="res://assets/bottom_ui.png" id="3_jy0d4"]
+[ext_resource type="PackedScene" uid="uid://imuf4cf0yqn1" path="res://scenes/bottom_ui.tscn" id="3_js5d8"]
 [ext_resource type="Script" path="res://scripts/grid.gd" id="4_4jr62"]
 
 [node name="Game" type="Node2D"]
@@ -14,11 +14,10 @@ texture = ExtResource("1_blg2x")
 
 [node name="top_ui" parent="." instance=ExtResource("2_wrbvl")]
 
-[node name="bottom_ui" type="TextureRect" parent="."]
-offset_top = 928.0
+[node name="bottom_ui" parent="." instance=ExtResource("3_js5d8")]
+offset_top = 933.0
 offset_right = 576.0
-offset_bottom = 1020.0
-texture = ExtResource("3_jy0d4")
+offset_bottom = 1025.0
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource("4_4jr62")
@@ -41,6 +40,12 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
+[node name="next_level" type="Timer" parent="."]
+
+[node name="second_timer" type="Timer" parent="."]
+
 [connection signal="timeout" from="destroy_timer" to="grid" method="_on_destroy_timer_timeout"]
 [connection signal="timeout" from="collapse_timer" to="grid" method="_on_collapse_timer_timeout"]
 [connection signal="timeout" from="refill_timer" to="grid" method="_on_refill_timer_timeout"]
+[connection signal="timeout" from="next_level" to="grid" method="_on_next_level_timeout"]
+[connection signal="timeout" from="second_timer" to="grid" method="_on_second_timer_timeout"]

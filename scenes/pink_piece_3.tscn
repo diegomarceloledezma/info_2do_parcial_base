@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbbwyqpvabnu4"]
+
+[ext_resource type="PackedScene" uid="uid://dimhfx4c1igfv" path="res://scenes/piece.tscn" id="1_udjyi"]
+[ext_resource type="Texture2D" uid="uid://bnq84xajqjj6m" path="res://assets/pieces/Pink Piece 3.png" id="2_mtc4d"]
+
+[node name="PinkPiece3" instance=ExtResource("1_udjyi")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_mtc4d")

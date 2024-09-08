@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmxd6efu8uvec"]
+
+[ext_resource type="PackedScene" uid="uid://dimhfx4c1igfv" path="res://scenes/piece.tscn" id="1_6tlrc"]
+[ext_resource type="Texture2D" uid="uid://bg2lncm7m06a5" path="res://assets/pieces/Orange Row.png" id="2_jp8ns"]
+
+[node name="OrangeRow" instance=ExtResource("1_6tlrc")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_jp8ns")

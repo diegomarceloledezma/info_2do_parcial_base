@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvdtgvyv4bk4o"]
+
+[ext_resource type="PackedScene" uid="uid://dimhfx4c1igfv" path="res://scenes/piece.tscn" id="1_y8gsm"]
+[ext_resource type="Texture2D" uid="uid://dhru1m302wiug" path="res://assets/pieces/Blue Row.png" id="2_wdfc2"]
+
+[node name="BlueRow" instance=ExtResource("1_y8gsm")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_wdfc2")
